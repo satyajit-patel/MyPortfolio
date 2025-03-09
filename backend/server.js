@@ -32,4 +32,8 @@ app.post("/api/v1/chat", async (req, res) => {
   }
 });
 
+app.use("/", (req, res) => {
+  res.send("up");
+})
+
 app.listen(PORT, () => console.log("Server running on port", PORT));
