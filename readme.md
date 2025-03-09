@@ -1,1 +1,1 @@
-### find the live link [hre](https://www.satyajitpatel.in)
+### find the live link [here](https://www.satyajitpatel.in)
