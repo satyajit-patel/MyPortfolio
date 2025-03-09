@@ -16,9 +16,12 @@ export function PlaceholdersAndVanishInputDemo() {
   const [markdownText, setMarkdownText] = useState("");
   const [text, setText] = useState("");
 
+  const BACKEND_API = import.meta.env.VITE_BACKEND_API;
+  // console.log(BACKEND_API);
+
   async function getLLMResponse(text) {
     try {
-      const res = await axios.post("/api/v1/chat", { text });
+      const res = await axios.post(`${BACKEND_API}/api/v1/chat`, { text });
       return res.data.reply;
     } catch (error) {
       console.error("Error:", error);
