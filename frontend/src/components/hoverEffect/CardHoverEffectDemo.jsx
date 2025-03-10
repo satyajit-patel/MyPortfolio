@@ -13,7 +13,7 @@ export const projects = [
     description:
       "A real-time voice assistant that transcribes speech, processes it using an LLM, and responds via text-to-speech, enabling hands-free AI conversations.",
     github: "https://github.com/satyajit-patel/EchoFriendly",
-    deployed: "https://github.com/satyajit-patel/EchoFriendly"
+    deployed: "https://echo-friendly.vercel.app/"
   },
   {
     title: "Flashcard-Learning-Tool",
