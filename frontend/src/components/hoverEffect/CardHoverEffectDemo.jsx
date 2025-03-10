@@ -20,7 +20,7 @@ export const projects = [
     description:
       "A tool that lets users flip cards to reveal answers and navigate through a set using Next and Previous buttons.",
     github: "https://github.com/satyajit-patel/flashcard-learning-tool",
-    deployed: "https://github.com/satyajit-patel/flashcard-learning-tool"
+    deployed: "https://flashcard-learning-tool-omega.vercel.app/"
   },
   {
     title: "AutoBlogAI",
@@ -30,24 +30,24 @@ export const projects = [
     deployed: "https://github.com/satyajit-patel/autoBlogAI"
   },
   {
-    title: "Joke-Generator",
-    description:
-      "A simple tool to quickly generate a witty joke on a given topic.",
-    github: "https://github.com/satyajit-patel/Topic-Joke-Generator",
-    deployed: "https://github.com/satyajit-patel/Topic-Joke-Generator"
-  },
-  {
     title: "Preview-Music",
     description:
       "This tool allows users to search for music and play 30-second song previews with attached Spotify link.",
     github: "https://github.com/satyajit-patel/preview-music",
-    deployed: "https://github.com/satyajit-patel/preview-music"
+    deployed: "https://preview-music-git-master-satyajit-patels-projects.vercel.app/"
   },
   {
     title: "Password-Generator",
     description:
       "This tool generates secure passwords with customizable options.",
     github: "https://github.com/satyajit-patel/password-generator",
-    deployed: "https://github.com/satyajit-patel/password-generator"
+    deployed: "https://password-generator-ten-green.vercel.app/"
+  },
+  {
+    title: "Joke-Generator",
+    description:
+      "A simple tool to quickly generate a witty joke on a given topic.",
+    github: "https://github.com/satyajit-patel/Topic-Joke-Generator",
+    deployed: "https://topic-joke-generator.vercel.app/"
   },
 ];
