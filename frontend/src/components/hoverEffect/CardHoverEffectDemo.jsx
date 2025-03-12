@@ -27,7 +27,7 @@ export const projects = [
     description:
       "An AI-powered blog automation tool that generates and publishes high-quality blogs in real-time using web scraping, SEO optimization, and a fine-tuned language model.",
     github: "https://github.com/satyajit-patel/autoBlogAI",
-    deployed: "https://auto-blog-ai-sable.vercel.app/"
+    deployed: "https://auto-blog-ai-one.vercel.app/"
   },
   {
     title: "Preview-Music",
