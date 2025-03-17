@@ -30,6 +30,20 @@ export const projects = [
     deployed: "https://auto-blog-ai-one.vercel.app/"
   },
   {
+    title: "VisiPrompt",
+    description:
+      "A tool that Converts text prompts into AI-generated images instantly.",
+    github: "https://github.com/satyajit-patel/VisiPrompt",
+    deployed: "https://visi-prompt.vercel.app/"
+  },
+  {
+    title: "Efficient Image Classifier",
+    description:
+      "Takes an input image and classifies it into one of 1,000 predefined categories (like dog, car, cat, etc.).",
+    github: "https://github.com/satyajit-patel/COCO",
+    deployed: "https://coco-ebon.vercel.app"
+  },
+  {
     title: "Preview-Music",
     description:
       "This tool allows users to search for music and play 30-second song previews with attached Spotify link.",

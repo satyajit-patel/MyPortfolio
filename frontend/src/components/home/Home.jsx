@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+// import {FloatingDockDemo} from "../float/FloatingDockDemo";
 
 function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -132,7 +133,9 @@ function Home() {
               {link.icon}
             </a>
           ))}
+          {/* <FloatingDockDemo /> */}
         </div>
+        
       </div>
     </div>
   );
