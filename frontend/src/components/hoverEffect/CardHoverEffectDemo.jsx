@@ -37,6 +37,13 @@ export const projects = [
     deployed: "https://visi-prompt.vercel.app/"
   },
   {
+    title: "Contest Tracker API",
+    description:
+      "The Contest Tracker API collects and stores coding contest details from various platforms and associates them with relevant YouTube solution links.",
+    github: "https://github.com/satyajit-patel/TLE-Contest-Tracker-API",
+    deployed: "https://tle-contest-tracker-api.vercel.app"
+  },
+  {
     title: "Efficient Image Classifier",
     description:
       "Takes an input image and classifies it into one of 1,000 predefined categories (like dog, car, cat, etc.).",
