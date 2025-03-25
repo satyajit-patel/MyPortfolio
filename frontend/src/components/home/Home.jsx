@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-// import {FloatingDockDemo} from "../float/FloatingDockDemo";
+import {FloatingDockDemo} from "../float/FloatingDockDemo";
 
 function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -122,7 +122,8 @@ function Home() {
         
         {/* Social Links */}
         <div className="flex space-x-6 flex-wrap justify-center">
-          {socialLinks.map((link, index) => (
+
+          {/* {socialLinks.map((link, index) => (
             <a 
               key={index}
               href={link.url} 
@@ -132,8 +133,10 @@ function Home() {
             >
               {link.icon}
             </a>
-          ))}
-          {/* <FloatingDockDemo /> */}
+          ))} */}
+
+          <FloatingDockDemo />
+
         </div>
         
       </div>

@@ -17,7 +17,7 @@ export function PlaceholdersAndVanishInputDemo() {
   const [text, setText] = useState("hello");
 
   const VITE_BACKEND_API = import.meta.env.VITE_BACKEND_API;
-  console.log("llm", VITE_BACKEND_API);
+  // console.log("llm", VITE_BACKEND_API);
 
   async function getLLMResponse(text) {
     try {

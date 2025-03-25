@@ -27,7 +27,12 @@ export const HoverEffect = ({ items, className }) => {
           </AnimatePresence>
           <Card>
             <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+            <CardDescription>
+            {item.description}
+            <br />
+            <br />
+            {item.hashtags}
+            </CardDescription>
             <div className="flex gap-4 mt-4">
               <a href={item.github} target="_blank" className="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
