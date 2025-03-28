@@ -22,15 +22,31 @@ export const projects = [
       "A tool that lets users flip cards to reveal answers and navigate through a set using Next and Previous buttons.",
     github: "https://github.com/satyajit-patel/flashcard-learning-tool",
     deployed: "https://flashcard-learning-tool-omega.vercel.app/",
-    hashtags: "#Fullstack #CRUD",
+    hashtags: "#MERN #CRUD",
   },
   {
     title: "AutoBlogAI",
     description:
       "An AI-powered blog automation tool that generates and publishes high-quality blogs in real-time using web scraping, SEO optimization, and a fine-tuned language model.",
-    github: "https://github.com/satyajit-patel/autoBlogAI",
-    deployed: "https://auto-blog-ai-one.vercel.app/",
+    github: "https://github.com/satyajit-patel/AutoBlogAI",
+    deployed: "https://auto-blog-ai-eosin.vercel.app/",
     hashtags: "#FireCrawl #LLM #SEOOptimization #LangChain, #WebScraping",
+  },
+  {
+    title: "AI-Powered-Mock-Interview-System",
+    description:
+      "A full-stack application that provides a LeetCode-style coding interview experience with AI-powered code review and feedback.",
+    github: "https://github.com/satyajit-patel/AI-Powered-Mock-Interview-System",
+    deployed: "https://ai-powered-mock-interview-system.vercel.app",
+    hashtags: "#Judge0 #LangChain #MERN",
+  },
+  {
+    title: "Job-Recommendation-System",
+    description:
+      "A microservice-based application that provides job recommendations based on resume analysis using Natural Language Processing.",
+    github: "https://github.com/satyajit-patel/Job-Recommendation-System",
+    deployed: "https://job-recommendation-system-two.vercel.app",
+    hashtags: "#JWT #Authentication #NLP #JobScraping, #MERN",
   },
   {
     title: "VisiPrompt",
@@ -54,7 +70,15 @@ export const projects = [
       "Takes an input image and classifies it into one of 1,000 predefined categories (like dog, car, cat, etc.).",
     github: "https://github.com/satyajit-patel/COCO",
     deployed: "https://coco-ebon.vercel.app",
-    hashtags: "#CocoDataset #ImageClassification #huggingface #facebook/convnext-tiny-224",
+    hashtags: "#Cloudinary #CocoDataset #ImageClassification #huggingface #convnext",
+  },
+  {
+    title: "VisionaryAI",
+    description:
+      "Llama Vision Preview is an image description API that utilizes the power of AI to generate textual descriptions of uploaded images. Users can upload an image, which is then processed through a powerful AI model to extract meaningful insights.",
+    github: "https://github.com/satyajit-patel/VisionaryAI",
+    deployed: "https://visionary-ai-beryl.vercel.app",
+    hashtags: "#Multer #AIModel, FullStack",
   },
   {
     title: "Preview-Music",
