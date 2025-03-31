@@ -75,7 +75,7 @@ export const projects = [
     hashtags: "#Cloudinary #CocoDataset #ImageClassification #huggingface #convnext",
   },
   {
-    title: "user-profile",
+    title: "User-Profile-Management",
     description:
       "A RESTful API for managing user profiles with JWT authentication.",
     github: "https://github.com/satyajit-patel/user-profile-api",

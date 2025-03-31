@@ -6,7 +6,7 @@ function Navbar() {
 
   return (
     <header className="sticky top-0 inset-x-0 z-50 w-full text-sm bg-black">
-      <nav className="relative max-w-2xl w-full bg-black border border-gray-700 rounded-full mx-2 py-2.5 md:flex md:items-center md:justify-between md:py-0 md:px-4 md:mx-auto">
+      <nav className="relative max-w-2xl w-full bg-black border border-gray-700 rounded-full py-2.5 md:flex md:items-center md:justify-between md:py-0 md:px-4">
         <div className="px-4 md:px-0 flex justify-between items-center">
           {/* Logo removed */}
           <div className="md:hidden">
