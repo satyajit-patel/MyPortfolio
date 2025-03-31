@@ -46,7 +46,7 @@ const judge0 = async (req, res) => {
             return res.json(finalResult);
         }
         
-        return res.json({result});
+        return res.json(result);
     } catch (error) {
         console.error("API Error:", error.message);
         return res.status(500).json({ status: "Error", message: "Server error: " + error.message });

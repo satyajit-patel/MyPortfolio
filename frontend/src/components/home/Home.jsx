@@ -35,7 +35,7 @@ function Home() {
 
   return (
     <>
-    <nav className="bg-gray-900 p-3 flex justify-start items-center">
+    <nav className="bg-black p-3 flex justify-start items-center">
       <div className="flex space-x-2">
         <Link to="/projects">
           <button className="px-3 py-1 text-sm border border-[#D97706] text-[#D97706] rounded-md hover:bg-[#fbbf24] hover:text-black transition">
