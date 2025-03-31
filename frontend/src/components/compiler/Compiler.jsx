@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import AceEditor from 'react-ace';
 import axios from 'axios';
 import { Link } from "react-router-dom";
-import { Menu, Play, Moon, Sun } from "lucide-react";
+import {Play, Moon, Sun } from "lucide-react";
 
 // Import necessary ace modes and themes
 import 'ace-builds/src-noconflict/mode-python';
@@ -18,7 +18,6 @@ const Compiler = () => {
   const [output, setOutput] = useState('');
   const [loading, setLoading] = useState(false);
   const [editorTheme, setEditorTheme] = useState('monokai');
-  const [isOpen, setIsOpen] = useState(false);
 
   // Default code templates
   const defaultCode = {
@@ -67,39 +66,22 @@ const Compiler = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-gray-50 dark:bg-gray-900">
-      {/* Navigation */}
-      <nav className="bg-gray-800 px-4 py-3 flex justify-between items-center">
-        <h1 className="text-xl font-bold text-white">CodeCompiler</h1>
-        <div className="flex items-center">
-          <button
-            className="md:hidden text-white focus:outline-none mr-2"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <Menu size={24} />
+    <>
+    <nav className="bg-gray-900 p-3 flex justify-start items-center">
+      <div className="flex space-x-2">
+        <Link to="/">
+          <button className="px-3 py-1 text-sm border border-[#D97706] text-[#D97706] rounded-md hover:bg-[#fbbf24] hover:text-black transition">
+            Home
           </button>
-          <div
-            className={`${
-              isOpen ? "flex" : "hidden"
-            } absolute top-16 right-4 bg-gray-800 w-48 flex-col items-start space-y-2 p-4 rounded-md shadow-lg z-50 md:flex md:static md:w-auto md:flex-row md:space-y-0 md:space-x-3 md:p-0 md:bg-transparent md:shadow-none`}
-          >
-            <Link
-              to="/"
-              className="px-3 py-1 text-sm border border-yellow-500 text-yellow-500 rounded-md hover:bg-yellow-500 hover:text-black transition-colors"
-            >
-              Home
-            </Link>
-            <Link
-              to="/projects"
-              className="px-3 py-1 text-sm border border-gray-400 text-gray-400 rounded-md hover:bg-gray-400 hover:text-black transition-colors"
-            >
-              Projects
-            </Link>
-          </div>
-        </div>
-      </nav>
-
-      {/* Controls */}
+        </Link>
+        <Link to="/projects">
+          <button className="px-3 py-1 text-sm border border-gray-400 text-gray-400 rounded-md hover:bg-gray-400 hover:text-black transition">
+            Projects
+          </button>
+        </Link>
+      </div>
+    </nav>
+    <div className="flex flex-col h-screen bg-gray-50 dark:bg-gray-900">
       <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 px-4 py-3 flex justify-between items-center shadow-sm">
         <div className="flex items-center space-x-4">
           <select 
@@ -218,6 +200,7 @@ const Compiler = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
