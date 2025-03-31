@@ -14,9 +14,7 @@ export function TextRevealCardPreview() {
           About Me
         </TextRevealCardTitle>
         <TextRevealCardDescription>
-        I am Satyajit Patel, pursuing an MTech in AI & Data Science at VIT Bhopal.
-        I have dedicated significant time to mastering Data Structures and Algorithms in C++, along with exploring various technologies and the foundations of computer science.
-        I enjoy building and experimenting with technology, constantly learning through both creation and exploration.
+          I'm Satyajit Patel, a proud loud introvert who loves coding, getting my hands dirty building tech, and exploring unmet technologies. I'm currently pursuing an MTech in AI & Data Science at VIT Bhopal, diving deep into C++, GenAI, algorithms, and all things tech. When I'm not experimenting with new ideas, you'll find me enjoying a good game of cricket.
         </TextRevealCardDescription>
       </TextRevealCard>
     </div>)

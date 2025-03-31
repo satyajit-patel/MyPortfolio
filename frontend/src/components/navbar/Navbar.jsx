@@ -6,9 +6,10 @@ function Navbar() {
 
   return (
     <header className="sticky top-0 inset-x-0 z-50 w-full text-sm bg-black">
-      <nav className="relative max-w-2xl w-full bg-black border border-gray-700 rounded-full py-2.5 md:flex md:items-center md:justify-between md:py-0 md:px-4">
-        <div className="px-4 md:px-0 flex justify-between items-center">
-          {/* Logo removed */}
+      <nav className="w-full bg-black py-2.5 md:flex md:items-center md:px-4">
+        {/* Top row: brand area / toggle button */}
+        <div className="flex items-center justify-between px-4 md:px-0">
+          {/* Logo or brand name could go here */}
           <div className="md:hidden">
             <button
               type="button"
@@ -48,35 +49,36 @@ function Navbar() {
           </div>
         </div>
 
+        {/* Nav links */}
         <div className={`${isOpen ? "block" : "hidden"} md:block`}>
-          <div className="flex flex-col md:flex-row md:items-center md:justify-end gap-2 md:gap-3 mt-3 md:mt-0 py-2 md:py-0 md:ps-7">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-start gap-2 md:gap-3 mt-3 md:mt-0 py-2 md:py-0 px-4 md:px-0">
             <Link
               to="/"
-              className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-gray-300 text-gray-300 hover:text-white"
+              className="py-0.5 md:py-3 border-b-2 border-gray-300 text-gray-300 hover:text-white"
             >
               Home
             </Link>
             <Link
               to="/projects"
-              className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-300 hover:text-white"
+              className="py-0.5 md:py-3 border-b-2 border-transparent text-gray-300 hover:text-white"
             >
               Projects
             </Link>
             <Link
               to="/about"
-              className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-300 hover:text-white"
+              className="py-0.5 md:py-3 border-b-2 border-transparent text-gray-300 hover:text-white"
             >
               About
             </Link>
             <Link
               to="/gpt"
-              className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-300 hover:text-white"
+              className="py-0.5 md:py-3 border-b-2 border-transparent text-gray-300 hover:text-white"
             >
               Gpt
             </Link>
             <Link
               to="/compiler"
-              className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-300 hover:text-white"
+              className="py-0.5 md:py-3 border-b-2 border-transparent text-gray-300 hover:text-white"
             >
               Compiler
             </Link>
