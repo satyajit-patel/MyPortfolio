@@ -3,6 +3,9 @@ const { llama } = require("../utils/llama");
 
 const judge0 = async (req, res) => {
     const { code, language, input } = req.body;
+    // console.log(code);
+    // console.log(language);
+    // console.log(input);
     
     if (!code) {
         return res.status(400).json({ status: "Error", message: "Code is required" });
@@ -43,7 +46,7 @@ const judge0 = async (req, res) => {
             return res.json(finalResult);
         }
         
-        return res.json(result);
+        return res.json({result});
     } catch (error) {
         console.error("API Error:", error.message);
         return res.status(500).json({ status: "Error", message: "Server error: " + error.message });

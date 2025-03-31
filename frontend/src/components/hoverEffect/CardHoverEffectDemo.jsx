@@ -92,6 +92,14 @@ export const projects = [
     hashtags: "#Cloudinary #CocoDataset #ImageClassification #huggingface #convnext",
   },
   {
+    title: "user-profile",
+    description:
+      "A RESTful API for managing user profiles with JWT authentication.",
+    github: "https://github.com/satyajit-patel/user-profile-api",
+    deployed: "https://user-profile-api.vercel.app",
+    hashtags: "#JWT, MERN",
+  },
+  {
     title: "VisionaryAI",
     description:
       "Llama Vision Preview is an image description API that utilizes the power of AI to generate textual descriptions of uploaded images. Users can upload an image, which is then processed through a powerful AI model to extract meaningful insights.",
