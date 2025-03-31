@@ -1,28 +1,11 @@
 import { HoverEffect } from "./card-hover-effect";
-import { Link } from "react-router-dom";
 
 export function CardHoverEffectDemo() {
   return (
     (
-      <>
-      <nav className="bg-black p-3 flex justify-start items-center">
-      <div className="flex space-x-2">
-        <Link to="/">
-          <button className="px-3 py-1 text-sm border border-[#D97706] text-[#D97706] rounded-md hover:bg-[#fbbf24] hover:text-black transition">
-            Home
-          </button>
-        </Link>
-        <Link to="/compiler">
-          <button className="px-3 py-1 text-sm border border-gray-400 text-gray-400 rounded-md hover:bg-gray-400 hover:text-black transition">
-            Compiler
-          </button>
-        </Link>
-      </div>
-    </nav>
       <div className="max-w-5xl mx-auto px-8">
         <HoverEffect items={projects} />
       </div>
-    </>
     )
   );
 }

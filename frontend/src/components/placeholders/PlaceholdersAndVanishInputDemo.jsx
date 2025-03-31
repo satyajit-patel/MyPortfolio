@@ -44,7 +44,7 @@ export function PlaceholdersAndVanishInputDemo() {
   
   const onSubmit = async (e) => {
     e.preventDefault();
-    console.log("submitted", text);
+    // console.log("submitted", text);
     setIsLoading(true);
     setMarkdownText(""); // Clear previous text while loading
     const response = await getLLMResponse(text);
@@ -64,8 +64,8 @@ export function PlaceholdersAndVanishInputDemo() {
   };
   
   return (
-    <div className="h-[40rem] flex flex-col justify-center items-center px-4 bg-[#f59e0b]">
-      <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-black">
+    <div className="h-[40rem] flex flex-col justify-center items-center px-4 bg-black">
+      <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-gray-100">
         Ask Anything
       </h2>
       <PlaceholdersAndVanishInput placeholders={placeholders} onChange={handleChange} onSubmit={onSubmit} />

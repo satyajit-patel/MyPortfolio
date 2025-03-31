@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AceEditor from 'react-ace';
 import axios from 'axios';
-import { Link } from "react-router-dom";
 import {Play, Moon, Sun } from "lucide-react";
 
 // Import necessary ace modes and themes
@@ -66,23 +65,8 @@ const Compiler = () => {
   };
 
   return (
-    <>
-    <nav className="bg-black p-3 flex justify-start items-center">
-      <div className="flex space-x-2">
-        <Link to="/">
-          <button className="px-3 py-1 text-sm border border-[#D97706] text-[#D97706] rounded-md hover:bg-[#fbbf24] hover:text-black transition">
-            Home
-          </button>
-        </Link>
-        <Link to="/projects">
-          <button className="px-3 py-1 text-sm border border-gray-400 text-gray-400 rounded-md hover:bg-gray-400 hover:text-black transition">
-            Projects
-          </button>
-        </Link>
-      </div>
-    </nav>
     <div className="flex flex-col h-screen bg-gray-50 dark:bg-gray-900">
-      <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 px-4 py-3 flex justify-between items-center shadow-sm">
+      <div className="bg-black dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 px-4 py-3 flex justify-between items-center shadow-sm">
         <div className="flex items-center space-x-4">
           <select 
             value={language} 
@@ -200,7 +184,6 @@ const Compiler = () => {
         </div>
       </div>
     </div>
-    </>
   );
 };
 

@@ -1,10 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
 import {FloatingDockDemo} from "../float/FloatingDockDemo";
-import { Link } from "react-router-dom";
+import axios from 'axios';
 
 function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
+
+  useEffect(() => {
+    const wakeUpSidd = async () => {
+      const response = await axios.post(`${import.meta.env.VITE_BACKEND_API}/ping`);
+      console.log(response.data);
+    }
+    wakeUpSidd();
+  }, []);
 
   // Function to toggle play/pause
   const toggleMusic = () => {
@@ -34,28 +42,13 @@ function Home() {
 
 
   return (
-    <>
-    <nav className="bg-black p-3 flex justify-start items-center">
-      <div className="flex space-x-2">
-        <Link to="/projects">
-          <button className="px-3 py-1 text-sm border border-[#D97706] text-[#D97706] rounded-md hover:bg-[#fbbf24] hover:text-black transition">
-            Projects
-          </button>
-        </Link>
-        <Link to="/compiler">
-          <button className="px-3 py-1 text-sm border border-gray-400 text-gray-400 rounded-md hover:bg-gray-400 hover:text-black transition">
-            Compiler
-          </button>
-        </Link>
-      </div>
-    </nav>
-    <div className="min-h-screen bg-black text-white py-8 flex flex-col items-center justify-center relative">
+    <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center relative">
       {/* Audio Element */}
       <audio ref={audioRef} src="/just-do-it.mp3"></audio>
       
       {/* Speaker Icon - Positioned at top right corner */}
       <div 
-        className={`absolute top-4 right-4 cursor-pointer transform transition-transform hover:scale-110 ${isPlaying ? 'animate-pulse' : ''}`}
+        className={`absolute top-1 right-1 cursor-pointer transform transition-transform hover:scale-110 ${isPlaying ? 'animate-pulse' : ''}`}
         onClick={toggleMusic}
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" className="w-8 h-8">
@@ -69,9 +62,9 @@ function Home() {
       
       <div className="flex flex-col items-center max-w-md w-full px-4">
         {/* Title */}
-        <h1 className="text-5xl mb-8 font-bold" style={{ fontFamily: "'Brush Script MT', cursive" }}>
+        <div className="text-5xl mb-8 py-16 font-bold" style={{ fontFamily: "'Brush Script MT', cursive" }}>
           Just do it!
-        </h1>
+        </div>
         
         {/* Logo Circle with the provided image */}
         <div className="w-64 h-64 rounded-full border-2 border-white flex items-center justify-center mb-12 overflow-hidden">
@@ -86,7 +79,6 @@ function Home() {
         <FloatingDockDemo />
       </div>
     </div>
-    </>
   );
 }
 
