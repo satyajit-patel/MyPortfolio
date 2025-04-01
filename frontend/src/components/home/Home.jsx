@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import {FloatingDockDemo} from "../float/FloatingDockDemo";
 import axios from 'axios';
+import { FlipWordsDemo } from "../wordFlip/FlipWordsDemo";
 
 function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -67,13 +68,15 @@ function Home() {
         </div>
         
         {/* Logo Circle with the provided image */}
-        <div className="w-64 h-64 rounded-full border-2 border-white flex items-center justify-center mb-12 overflow-hidden">
+        <div className="w-64 h-64 rounded-full border-2 border-white flex flex-col items-center justify-center mb-12 overflow-hidden">
           <img 
             src="https://res.cloudinary.com/ddo6latuj/image/upload/v1724069052/satyaVitImg_w9owdn.jpg" 
             alt="Profile" 
             className="w-full h-full object-cover"
           />
         </div>
+
+        <FlipWordsDemo />
         
         {/* Social Links */}
         <FloatingDockDemo />
