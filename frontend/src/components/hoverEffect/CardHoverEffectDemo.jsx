@@ -96,7 +96,7 @@ export const projects = [
       "This tool allows users to search for music and play 30-second song previews with attached Spotify link.",
     github: "https://github.com/satyajit-patel/preview-music",
     deployed: "https://preview-music-git-master-satyajit-patels-projects.vercel.app/",
-    hashtags: "#React #SpotifyApi",
+    hashtags: "#Docker #DockerHub #React #SpotifyApi",
   },
   {
     title: "Password-Generator",
