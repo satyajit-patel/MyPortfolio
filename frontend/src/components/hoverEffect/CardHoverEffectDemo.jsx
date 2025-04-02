@@ -40,7 +40,7 @@ export const projects = [
       "A full-stack application that provides a LeetCode-style coding interview experience with AI-powered code review and feedback.",
     github: "https://github.com/satyajit-patel/AI-Powered-Mock-Interview-System",
     deployed: "https://ai-powered-mock-interview-system.vercel.app",
-    hashtags: "#Judge0 #LangChain #MERN",
+    hashtags: "#LLM #Judge0 #LangChain #MERN",
   },
   {
     title: "Job-Recommendation-System",
@@ -48,7 +48,7 @@ export const projects = [
       "A microservice-based application that provides job recommendations based on resume analysis using Natural Language Processing.",
     github: "https://github.com/satyajit-patel/Job-Recommendation-System",
     deployed: "https://job-recommendation-system-two.vercel.app",
-    hashtags: "#JWT #Authentication #NLP #JobScraping, #MERN",
+    hashtags: "#JWT #LLM #Authentication #NLP #JobScraping, #MERN",
   },
   {
     title: "VisiPrompt",
@@ -72,7 +72,7 @@ export const projects = [
       "Takes an input image and classifies it into one of 1,000 predefined categories (like dog, car, cat, etc.).",
     github: "https://github.com/satyajit-patel/COCO",
     deployed: "https://coco-ebon.vercel.app",
-    hashtags: "#Cloudinary #CocoDataset #ImageClassification #huggingface #convnext",
+    hashtags: "#Cloudinary #LLM #CocoDataset #ImageClassification #huggingface #convnext",
   },
   {
     title: "User-Profile-Management",
@@ -88,7 +88,7 @@ export const projects = [
       "Llama Vision Preview is an image description API that utilizes the power of AI to generate textual descriptions of uploaded images. Users can upload an image, which is then processed through a powerful AI model to extract meaningful insights.",
     github: "https://github.com/satyajit-patel/VisionaryAI",
     deployed: "https://visionary-ai-beryl.vercel.app",
-    hashtags: "#Multer #AIModel, FullStack",
+    hashtags: "#Multer #LLM #AIModel, FullStack",
   },
   {
     title: "Preview-Music",
