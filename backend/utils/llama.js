@@ -1,5 +1,5 @@
 const { ChatGroq } = require("@langchain/groq");
-const { HumanMessage, SystemMessage } = require("@langchain/core/messages");
+const { HumanMessage, SystemMessage, AIMessage } = require("@langchain/core/messages");
 require("dotenv").config();
 
 const key = process.env.GROQ_API_KEY;
@@ -22,10 +22,10 @@ const groqLlama = new ChatGroq({
     try {
         let message = `Give a short and essential response for this: ${text}`;
         chatHistory.push(new HumanMessage(message));
-        let content = await getContent(chatHistory);
-        chatHistory.push(new SystemMessage(content));
+        let aiMessage = await getContent(chatHistory);
+        chatHistory.push(new AIMessage(aiMessage));
     
-        return content;
+        return aiMessage;
       } catch (error) {
         return error.message;
       }
