@@ -68,19 +68,19 @@ function Navbar() {
               to="/about"
               className="py-0.5 md:py-3 border-b-2 border-transparent text-gray-300 hover:text-white"
             >
-              About
+              aboutMe
             </Link>
             <Link
               to="/gpt"
               className="py-0.5 md:py-3 border-b-2 border-transparent text-gray-300 hover:text-white"
             >
-              Gpt
+              myGpt
             </Link>
             <Link
               to="/compiler"
               className="py-0.5 md:py-3 border-b-2 border-transparent text-gray-300 hover:text-white"
             >
-              Compiler
+              myCompiler
             </Link>
           </div>
         </div>

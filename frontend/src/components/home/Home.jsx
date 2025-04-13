@@ -76,7 +76,7 @@ function Home() {
           />
         </div>
 
-        <FlipWordsDemo />
+        {/* <FlipWordsDemo /> */}
         
         {/* Social Links */}
         <FloatingDockDemo />
