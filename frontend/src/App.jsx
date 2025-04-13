@@ -12,18 +12,18 @@ function App() {
   return (
     <>  
       <Router>
-        <Navbar />
+      <Navbar />
+      <div className="bg-black">
         <Routes>
-          <div className="bg-black">
           <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<CardHoverEffectDemo />} />
-            <Route path="/compiler" element={<Compiler />} />
-            <Route path="/gpt" element={<PlaceholdersAndVanishInputDemo />} />
-            <Route path="/about" element={<TextRevealCardPreview />} />
-          </div>
-          </Routes>
-        <Footer />
-      </Router>
+          <Route path="/projects" element={<CardHoverEffectDemo />} />
+          <Route path="/compiler" element={<Compiler />} />
+          <Route path="/gpt" element={<PlaceholdersAndVanishInputDemo />} />
+          <Route path="/about" element={<TextRevealCardPreview />} />
+        </Routes>
+      </div>
+      <Footer />
+    </Router>
     </>
   )
 }
