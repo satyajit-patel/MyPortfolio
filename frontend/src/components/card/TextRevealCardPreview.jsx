@@ -9,7 +9,7 @@ import {FlipWordsDemo} from "../wordFlip/FlipWordsDemo";
 export function TextRevealCardPreview() {
   return (
     (
-    <>
+    <div className="h-screen">
     <FlipWordsDemo />
     <div
       className="flex items-center justify-center bg-black h-[40rem] w-full">
@@ -22,6 +22,6 @@ export function TextRevealCardPreview() {
         </TextRevealCardDescription>
       </TextRevealCard>
     </div>
-    </>)
+    </div>)
   );
 }
