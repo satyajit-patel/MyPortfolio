@@ -13,7 +13,6 @@ function App() {
     <>  
       <Router>
       <Navbar />
-      <div className="bg-black">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<CardHoverEffectDemo />} />
@@ -21,7 +20,6 @@ function App() {
           <Route path="/gpt" element={<PlaceholdersAndVanishInputDemo />} />
           <Route path="/about" element={<TextRevealCardPreview />} />
         </Routes>
-      </div>
       <Footer />
     </Router>
     </>
