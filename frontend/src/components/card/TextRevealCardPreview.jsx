@@ -9,7 +9,7 @@ import {FlipWordsDemo} from "../wordFlip/FlipWordsDemo";
 export function TextRevealCardPreview() {
   return (
     (
-    <div className="bg-black">
+    <div className="bg-black h-screen">
       <FlipWordsDemo />
       <div
         className="flex items-center justify-center bg-black h-[40rem] w-full">
