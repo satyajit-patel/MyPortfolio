@@ -14,11 +14,13 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-            <Route path="/" element={<Home />} />
+          <div className="bg-black">
+          <Route path="/" element={<Home />} />
             <Route path="/projects" element={<CardHoverEffectDemo />} />
             <Route path="/compiler" element={<Compiler />} />
             <Route path="/gpt" element={<PlaceholdersAndVanishInputDemo />} />
             <Route path="/about" element={<TextRevealCardPreview />} />
+          </div>
           </Routes>
         <Footer />
       </Router>
