@@ -10,7 +10,7 @@ export function FlipWordsDemo() {
         className="text-4xl mx-auto font-normal text-gray-100 p-2">
         I like
         <FlipWords words={words} /> <br />
-        Hi, I'm Satyajit
+        I'm Satyajit Patel
       </div>
     </div>
   );

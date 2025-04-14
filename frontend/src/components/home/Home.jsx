@@ -63,7 +63,7 @@ function Home() {
       
       <div className="flex flex-col items-center max-w-md w-full px-4">
         {/* Title */}
-        <div className="text-5xl mb-8 py-16 font-bold" style={{ fontFamily: "'Brush Script MT', cursive" }}>
+        <div className="text-5xl mb-8 font-bold" style={{ fontFamily: "'Brush Script MT', cursive" }}>
           Just do it!
         </div>
         

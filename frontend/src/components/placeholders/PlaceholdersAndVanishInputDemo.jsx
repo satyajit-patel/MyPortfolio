@@ -64,7 +64,7 @@ export function PlaceholdersAndVanishInputDemo() {
   };
   
   return (
-    <div className="h-screen flex flex-col items-center px-4 bg-black">
+    <div className="h-screen flex flex-col items-center justify-center px-4 bg-black">
       <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-gray-100">
         Ask Anything
       </h2>
