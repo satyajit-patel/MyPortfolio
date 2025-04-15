@@ -56,7 +56,7 @@ const judge0 = async (req, res) => {
 const llm = async (req, res) => {
     try {
         const {text} = req.body;
-        // console.log(text);
+        console.log(text);
     
         const content = await llama(text);
     
