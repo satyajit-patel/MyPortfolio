@@ -11,7 +11,7 @@ export function CardHoverEffectDemo() {
 }
 export const projects = [
   {
-    title: "User-Profile-Management",
+    title: "Shorty-Url",
     description:
       "A simple URL-shortening service built with Next.js 13 (App Router), MongoDB, and Clerk authentication.",
     github: "https://github.com/satyajit-patel/shorty-url-js",
