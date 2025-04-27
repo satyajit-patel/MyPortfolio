@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import AceEditor from 'react-ace';
 import axios from 'axios';
-import {Play, Moon, Sun } from "lucide-react";
+import { Play, Moon, Sun, Cpu } from "lucide-react";
 
 // Import necessary ace modes and themes
 import 'ace-builds/src-noconflict/mode-python';
 import 'ace-builds/src-noconflict/mode-javascript';
 import 'ace-builds/src-noconflict/mode-c_cpp';
 import 'ace-builds/src-noconflict/theme-monokai';
+import 'ace-builds/src-noconflict/theme-dracula';
 import 'ace-builds/src-noconflict/theme-github';
+
+// Import auto-complete functionality
+import 'ace-builds/src-noconflict/ext-language_tools';
+import 'ace-builds/src-noconflict/snippets/python';
+import 'ace-builds/src-noconflict/snippets/javascript';
+import 'ace-builds/src-noconflict/snippets/c_cpp';
 
 const Compiler = () => {
   const [language, setLanguage] = useState('python');
@@ -16,7 +23,7 @@ const Compiler = () => {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
   const [loading, setLoading] = useState(false);
-  const [editorTheme, setEditorTheme] = useState('monokai');
+  const [editorTheme, setEditorTheme] = useState('dracula');
 
   // Default code templates
   const defaultCode = {
@@ -37,7 +44,10 @@ const Compiler = () => {
 
   // Handle theme change
   const handleThemeChange = () => {
-    setEditorTheme(editorTheme === 'monokai' ? 'github' : 'monokai');
+    setEditorTheme(prev => {
+      if (prev === 'dracula') return 'github';
+      return 'dracula';
+    });
   };
 
   // Execute code
@@ -65,13 +75,14 @@ const Compiler = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-gray-50 dark:bg-gray-900">
-      <div className="bg-black dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 px-4 py-3 flex justify-between items-center shadow-sm">
+    <div className="flex flex-col h-screen bg-black text-gray-300">
+      <div className="bg-black border-b border-gray-800 px-4 py-3 flex justify-between items-center shadow-md">
         <div className="flex items-center space-x-4">
+          <Cpu size={24} className="text-green-500" />
           <select 
             value={language} 
             onChange={handleLanguageChange}
-            className="px-3 py-2 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 bg-gray-900 border border-gray-700 rounded-md text-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
           >
             <option value="python">Python</option>
             <option value="javascript">JavaScript</option>
@@ -79,17 +90,17 @@ const Compiler = () => {
           </select>
           <button
             onClick={handleThemeChange}
-            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+            className="p-2 rounded-full bg-gray-900 hover:bg-gray-800 transition-colors"
             aria-label="Toggle theme"
           >
-            {editorTheme === 'monokai' ? <Sun size={20} /> : <Moon size={20} />}
+            {editorTheme === 'dracula' ? <Sun size={20} className="text-yellow-400" /> : <Moon size={20} className="text-blue-400" />}
           </button>
         </div>
         <button 
           onClick={executeCode} 
           disabled={loading}
-          className={`flex items-center space-x-2 px-4 py-2 rounded-md font-medium text-white transition-colors ${
-            loading ? 'bg-gray-500 cursor-not-allowed' : 'bg-green-600 hover:bg-green-700'
+          className={`flex items-center space-x-2 px-4 py-2 rounded-md font-medium text-black transition-colors ${
+            loading ? 'bg-gray-600 cursor-not-allowed' : 'bg-green-500 hover:bg-green-600'
           }`}
         >
           <Play size={16} />
@@ -100,9 +111,10 @@ const Compiler = () => {
       {/* Editor Layout */}
       <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
         {/* Code Section */}
-        <div className="md:w-3/5 h-1/2 md:h-full border-r border-gray-200 dark:border-gray-700 flex flex-col">
-          <div className="bg-gray-100 dark:bg-gray-800 px-4 py-2 font-medium text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700">
-            Code
+        <div className="md:w-3/5 h-1/2 md:h-full border-r border-gray-800 flex flex-col">
+          <div className="bg-gray-900 px-4 py-2 font-medium text-gray-300 border-b border-gray-800 flex justify-between items-center">
+            <span>Code</span>
+            <span className="text-xs text-gray-500">Auto-suggestion enabled</span>
           </div>
           <div className="flex-1 overflow-hidden">
             <AceEditor
@@ -114,16 +126,20 @@ const Compiler = () => {
               fontSize={14}
               width="100%"
               height="100%"
-              showPrintMargin={true}
+              showPrintMargin={false}
               showGutter={true}
               highlightActiveLine={true}
               setOptions={{
-                enableBasicAutocompletion: false,
-                enableLiveAutocompletion: false,
-                enableSnippets: false,
+                enableBasicAutocompletion: true, // Enable basic autocompletion
+                enableLiveAutocompletion: true,  // Enable live autocompletion
+                enableSnippets: true,            // Enable code snippets
                 showLineNumbers: true,
                 tabSize: 2,
+                useSoftTabs: true,
+                fontFamily: "JetBrains Mono, monospace",
               }}
+              editorProps={{ $blockScrolling: Infinity }}
+              className="rounded-md"
             />
           </div>
         </div>
@@ -131,8 +147,8 @@ const Compiler = () => {
         {/* Input/Output Section */}
         <div className="md:w-2/5 h-1/2 md:h-full flex flex-col">
           {/* Input */}
-          <div className="h-1/2 flex flex-col border-b border-gray-200 dark:border-gray-700">
-            <div className="bg-gray-100 dark:bg-gray-800 px-4 py-2 font-medium text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700">
+          <div className="h-1/2 flex flex-col border-b border-gray-800">
+            <div className="bg-gray-900 px-4 py-2 font-medium text-gray-300 border-b border-gray-800">
               Input
             </div>
             <div className="flex-1 overflow-hidden">
@@ -151,17 +167,20 @@ const Compiler = () => {
                 setOptions={{
                   showLineNumbers: true,
                   tabSize: 2,
+                  fontFamily: "JetBrains Mono, monospace",
                 }}
+                editorProps={{ $blockScrolling: Infinity }}
+                className="rounded-md"
               />
             </div>
           </div>
           
           {/* Output */}
           <div className="h-1/2 flex flex-col">
-            <div className="bg-gray-100 dark:bg-gray-800 px-4 py-2 font-medium text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700">
+            <div className="bg-gray-900 px-4 py-2 font-medium text-gray-300 border-b border-gray-800">
               Output
             </div>
-            <div className="flex-1 overflow-hidden">
+            <div className="flex-1 overflow-hidden bg-black">
               <AceEditor
                 mode="text"
                 theme={editorTheme}
@@ -177,11 +196,20 @@ const Compiler = () => {
                 setOptions={{
                   showLineNumbers: true,
                   tabSize: 2,
+                  fontFamily: "JetBrains Mono, monospace",
                 }}
+                editorProps={{ $blockScrolling: Infinity }}
+                className="rounded-md"
               />
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Status Bar */}
+      <div className="bg-gray-900 text-gray-500 text-xs px-4 py-1 border-t border-gray-800 flex justify-between">
+        <div>{language.toUpperCase()} Compiler</div>
+        <div>Powered by AceEditor</div>
       </div>
     </div>
   );
