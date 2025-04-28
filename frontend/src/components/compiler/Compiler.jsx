@@ -114,7 +114,6 @@ const Compiler = () => {
         <div className="md:w-3/5 h-1/2 md:h-full border-r border-gray-800 flex flex-col">
           <div className="bg-gray-900 px-4 py-2 font-medium text-gray-300 border-b border-gray-800 flex justify-between items-center">
             <span>Code</span>
-            <span className="text-xs text-gray-500">Auto-suggestion enabled</span>
           </div>
           <div className="flex-1 overflow-hidden">
             <AceEditor
