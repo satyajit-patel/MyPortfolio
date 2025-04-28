@@ -48,7 +48,7 @@ export const projects = [
       "A microservice-based application that provides job recommendations based on resume analysis using Natural Language Processing.",
     github: "https://github.com/satyajit-patel/Job-Recommendation-System",
     deployed: "https://job-recommendation-system-two.vercel.app",
-    hashtags: "#JWT #LLM #Authentication #NLP #JobScraping, #MERN",
+    hashtags: "#JWT #multer #LLM #Authentication #NLP #JobScraping, #MERN",
   },
   {
     title: "VisiPrompt",
