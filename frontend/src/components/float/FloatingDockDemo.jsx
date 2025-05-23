@@ -8,6 +8,7 @@ import {
   IconBrandLinkedin, // LinkedIn
   IconCode, // LeetCode (alternative)
 } from "@tabler/icons-react";
+import { Icon } from '@iconify/react';
 
 // import Image from "next/image";
 
@@ -47,6 +48,13 @@ export function FloatingDockDemo() {
         <IconBook className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "https://scholar.google.com/citations?user=rcOjTuEAAAAJ&hl=en&authuser=1",
+    },
+    {
+      title: "Peerlist",
+      icon: (
+        <Icon icon="simple-icons:peerlist" className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://peerlist.io/i_satyajit",
     },
     {
       title: "Email",

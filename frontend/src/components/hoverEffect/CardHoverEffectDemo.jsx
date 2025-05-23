@@ -11,12 +11,20 @@ export function CardHoverEffectDemo() {
 }
 export const projects = [
   {
+    title: "PDF-Chat",
+    description:
+      "Upload a PDF and ask questions about its content. Get accurate, context-aware answers using AI and RAG.",
+    github: "https://github.com/satyajit-patel/PDF-Chat",
+    deployed: "https://doc-chat-two.vercel.app/",
+    hashtags: "#Next.js #Clerk #RAG, #LLM #Supabase #QdrantDB #VectorEmbedding #FullStack",
+  },
+  {
     title: "Shorty-Url",
     description:
       "A simple URL-shortening service built with Next.js 13 (App Router), MongoDB, and Clerk authentication.",
     github: "https://github.com/satyajit-patel/shorty-url-js",
     deployed: "https://shorty-url-js.vercel.app/",
-    hashtags: "#Next #GoogleAuth #Clerk #MongoDB #FullStack",
+    hashtags: "#Next.js #GoogleAuth #Clerk #MongoDB #FullStack",
   },
   {
     title: "EchoFriendly",
@@ -61,7 +69,7 @@ export const projects = [
   {
     title: "VisionaryAI",
     description:
-      "Llama Vision Preview is an image description API that utilizes the power of AI to generate textual descriptions of uploaded images. Users can upload an image, which is then processed through a powerful AI model to extract meaningful insights.",
+      "Llama Vision Preview is an AI-powered API that generates text descriptions from uploaded images.",
     github: "https://github.com/satyajit-patel/VisionaryAI",
     deployed: "https://visionary-ai-beryl.vercel.app",
     hashtags: "#Multer #LLM #AIModel, FullStack",
