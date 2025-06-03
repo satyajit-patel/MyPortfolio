@@ -83,6 +83,14 @@ export const projects = [
     hashtags: "#Cloudinary #LLM #CocoDataset #ImageClassification #huggingface #convnext",
   },
   {
+    title: "CSV-Analyst-Agent",
+    description:
+      "A streamlined web application that allows users to upload CSV files and interact with them using natural language queries, powered by AI.",
+    github: "https://github.com/satyajit-patel/csv-agent",
+    deployed: "https://csv-agent.vercel.app/",
+    hashtags: "#LLM #Next.js #DataAnalysis",
+  },
+  {
     title: "Contest Tracker API",
     description:
       "The Contest Tracker API collects and stores coding contest details from various platforms and associates them with relevant YouTube solution links.",
@@ -105,6 +113,14 @@ export const projects = [
     github: "https://github.com/satyajit-patel/Topic-Joke-Generator",
     deployed: "https://topic-joke-generator.vercel.app/",
     hashtags: "#LLM #React",
+  },
+  {
+    title: "Mini-Twitter",
+    description:
+      "A sleek social platform for creating and sharing short posts. Built with Django and Bootstrap for full-stack CRUD operations.",
+    github: "https://github.com/satyajit-patel/miniTwitter",
+    deployed: "https://mini-twitter-lsd8.onrender.com/",
+    hashtags: "#DJango #Python #CRUD",
   },
   {
     title: "Flashcard-Learning-Tool",
