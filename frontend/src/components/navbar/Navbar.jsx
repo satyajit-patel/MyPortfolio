@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <header className="sticky top-0 inset-x-0 z-50 w-full text-sm bg-black">
@@ -54,31 +55,31 @@ function Navbar() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-start gap-2 md:gap-3 mt-3 md:mt-0 py-2 md:py-0 px-4 md:px-0">
             <Link
               to="/"
-              className="py-0.5 md:py-3 border-b-2 border-gray-300 text-gray-300 hover:text-white"
+              className={`py-0.5 md:py-3 border-b-2 ${location.pathname === '/' ? 'border-gray-300 text-white' : 'border-transparent text-gray-300'} hover:text-white`}
             >
               Home
             </Link>
             <Link
               to="/projects"
-              className="py-0.5 md:py-3 border-b-2 border-transparent text-gray-300 hover:text-white"
+              className={`py-0.5 md:py-3 border-b-2 ${location.pathname === '/projects' ? 'border-gray-300 text-white' : 'border-transparent text-gray-300'} hover:text-white`}
             >
               Projects
             </Link>
             <Link
               to="/about"
-              className="py-0.5 md:py-3 border-b-2 border-transparent text-gray-300 hover:text-white"
+              className={`py-0.5 md:py-3 border-b-2 ${location.pathname === '/about' ? 'border-gray-300 text-white' : 'border-transparent text-gray-300'} hover:text-white`}
             >
               aboutMe
             </Link>
             <Link
               to="/gpt"
-              className="py-0.5 md:py-3 border-b-2 border-transparent text-gray-300 hover:text-white"
+              className={`py-0.5 md:py-3 border-b-2 ${location.pathname === '/gpt' ? 'border-gray-300 text-white' : 'border-transparent text-gray-300'} hover:text-white`}
             >
               myGpt
             </Link>
             <Link
               to="/compiler"
-              className="py-0.5 md:py-3 border-b-2 border-transparent text-gray-300 hover:text-white"
+              className={`py-0.5 md:py-3 border-b-2 ${location.pathname === '/compiler' ? 'border-gray-300 text-white' : 'border-transparent text-gray-300'} hover:text-white`}
             >
               myCompiler
             </Link>

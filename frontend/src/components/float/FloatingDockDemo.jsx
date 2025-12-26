@@ -7,6 +7,7 @@ import {
   IconBook, // Google Scholar (alternative)
   IconBrandLinkedin, // LinkedIn
   IconCode, // LeetCode (alternative)
+  IconBrandHackerrank, // HackerRank
 } from "@tabler/icons-react";
 import { Icon } from '@iconify/react';
 
@@ -41,6 +42,13 @@ export function FloatingDockDemo() {
         <IconCode className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "https://leetcode.com/u/satyajit_2",
+    },
+    {
+      title: "HackerRank",
+      icon: (
+        <IconBrandHackerrank className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://www.hackerrank.com/profile/satyajitpatel771",
     },
     {
       title: "GoogleScholar",
